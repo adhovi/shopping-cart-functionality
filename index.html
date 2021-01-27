@@ -83,7 +83,6 @@
    const iphoneAdd = document.getElementById('iphone-plus-button')
    const iphoneRemove = document.getElementById('iphone-minus-button')
 
-
    iphoneAdd.addEventListener('click', function () {
       var iphoneAmount = document.getElementById('iphone-amount').value
       iphoneAmount = parseFloat(iphoneAmount) + 1;
@@ -101,25 +100,24 @@
    })
 
 
-   iphoneRemove.addEventListener('click', function (){
+   iphoneRemove.addEventListener('click', function () {
       var iphoneAmount = document.getElementById('iphone-amount').value
-      if(parseInt(iphoneAmount)<1)
-      {
+      if (parseInt(iphoneAmount) < 1) {
 
       }
-      else{
-         var iphoneNewAmount = parseFloat(iphoneAmount) - 1;
-      document.getElementById('iphone-amount').value = iphoneNewAmount;
+      else {
+         var iphoneAmount = parseFloat(iphoneAmount) - 1;
+         document.getElementById('iphone-amount').value = iphoneAmount;
 
-      const iphonePrice = document.getElementById('iphone-price').innerText
-      var iphoneNewPrice = parseFloat(iphonePrice) - 1219;
-      document.getElementById('iphone-price').innerText = iphoneNewPrice;
+         const iphonePrice = document.getElementById('iphone-price').innerText
+         var iphoneNewPrice = parseFloat(iphoneAmount) * 1219;
+         document.getElementById('iphone-price').innerText = iphoneNewPrice;
 
-      const totalPrice = document.getElementById('subtotal').innerText
-      var newTotal = parseFloat(totalPrice) - 1219
-      document.getElementById('subtotal').innerText = newTotal
+         const totalPrice = document.getElementById('subtotal').innerText
+         var newTotal = parseFloat(totalPrice) - 1219
+         document.getElementById('subtotal').innerText = newTotal
 
-      const total = document.getElementById('total').innerText = newTotal
+         const total = document.getElementById('total').innerText = newTotal
       }
 
 
@@ -135,7 +133,7 @@
       document.getElementById('case-amount').value = caseNewAmount;
 
       const casePrice = document.getElementById('case-price').innerText
-      var caseNewPrice = parseFloat(casePrice) + 59;
+      var caseNewPrice = parseFloat(caseNewAmount) * 59;
       document.getElementById('case-price').innerText = caseNewPrice;
 
       const totalPrice = document.getElementById('subtotal').innerText
@@ -147,26 +145,24 @@
 
    caseRemove.addEventListener('click', function () {
       const caseAmount = document.getElementById('case-amount').value
-      if(parseInt(caseAmount)<1)
-      {
+      if (parseInt(caseAmount) < 1) {
 
       }
-      else{
-      var caseNewAmount = parseFloat(caseAmount) - 1;
-      document.getElementById('case-amount').value = caseNewAmount;
+      else {
+         var caseNewAmount = parseFloat(caseAmount) - 1;
+         document.getElementById('case-amount').value = caseNewAmount;
 
-      const casePrice = document.getElementById('case-price').innerText
-      var caseNewPrice = parseFloat(casePrice) - 59;
-      document.getElementById('case-price').innerText = caseNewPrice;
+         const casePrice = document.getElementById('case-price').innerText
+         var caseNewPrice = parseFloat(caseNewAmount) * 59;
+         document.getElementById('case-price').innerText = caseNewPrice;
 
-      const totalPrice = document.getElementById('subtotal').innerText
-      var newTotal = parseFloat(totalPrice) - 59
-      document.getElementById('subtotal').innerText = newTotal
+         const totalPrice = document.getElementById('subtotal').innerText
+         var newTotal = parseFloat(totalPrice) - 59
+         document.getElementById('subtotal').innerText = newTotal
 
-      const total = document.getElementById('total').innerText = newTotal
+         const total = document.getElementById('total').innerText = newTotal
       }
    })
-
 
 </script>
 
